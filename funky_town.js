@@ -6,6 +6,7 @@ HW15 -- Sequential Progression
 */
 
 var fibonacci = function(n){
+  if(n == 0) return 0;
   if (n < 2){
     return 1;
   }
@@ -41,3 +42,24 @@ console.log("\nrandomStudent Test: ");
 console.log(randomStudent());
 console.log(randomStudent());
 console.log(randomStudent());
+
+var fibfunc = function(){
+  console.log(fibonacci(32));
+}
+
+var gcdfunc = function(){
+  console.log(gcd(234, 32));
+}
+
+var randfunc = function(){
+  console.log(randomStudent());
+}
+
+var fButton = document.getElementById("fButton");
+fButton.addEventListener("click", fibfunc);
+
+var gcdButton = document.getElementById("gcdButton");
+gcdButton.addEventListener("click", gcdfunc);
+
+var randButton = document.getElementById("randButton");
+randButton.addEventListener("click", randfunc);
